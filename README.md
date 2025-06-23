@@ -7,9 +7,10 @@
     - Length: 입력한 Asterix 데이터의 전체 길이
     - 8Bit Array: 입력한 Asterix 문자열 데이터를 8비트 단위로 처리할 수 있도록 10진수로 변환한 값
 
-**작성 언어**
+**기술 스택**
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
 ---
 ### 설치 방법

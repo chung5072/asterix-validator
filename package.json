@@ -6,14 +6,21 @@
     "url": "git+https://github.com/chung5072/asterix-validator"
   },
   "description": "asterix 종류와 데이터 길이 파악 및 데이터 유효성 검증 모듈",
-  "main": "./build/src/main.js",
-  "types": "./build/src/main.d.ts",
+  "main": "./build/src/main/app.js",
+  "types": "./build/src/main/app.d.ts",
   "files": [
-    "build"
+    "build",
+    "jest.config.js",
+    "LICENSE",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    "tsconfig.json"
   ],
   "scripts": {
+    "test": "jest",
     "build": "tsc",
-    "start": "nodemon -e ts --ignore build/ --exec \"npm run build && node ./build/src/main.js\""
+    "start": "nodemon -e ts --ignore build/ --exec \"npm run build && node ./build/src/main/app.js\""
   },
   "keywords": [
     "asterix",
@@ -25,8 +32,11 @@
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.3",
+    "jest": "^30.0.2",
     "nodemon": "^3.1.10",
+    "ts-jest": "^29.4.0",
     "typescript": "^5.8.3"
   }
 }

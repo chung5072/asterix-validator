@@ -1,0 +1,28 @@
+{
+  "name": "asterix-validator",
+  "version": "1.0.1",
+  "description": "asterix 종류와 데이터 길이 파악 및 데이터 유효성 검증 모듈",
+  "main": "./build/src/main.js",
+  "types": "./build/src/main.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "nodemon -e ts --ignore build/ --exec \"npm run build && node ./build/src/main.js\""
+  },
+  "keywords": [
+    "asterix",
+    "category",
+    "total-length",
+    "valid"
+  ],
+  "author": "chung5072",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.8.3"
+  }
+}

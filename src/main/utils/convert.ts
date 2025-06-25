@@ -1,10 +1,16 @@
+interface AsterixMetaInfo {
+    category: number,
+    length: number,
+    bitArr: Uint8Array
+}
+
 /**
  * strToBitArr
  * 문자열 -> 8비트 배열로 변환
  * @param input 문자열
  * @returns 8비트 배열
  */
-const strToBitArr = (input: string) => {
+const strToBitArr = (input: string): AsterixMetaInfo => {
     // 입력받는 16진수 문자열 길이
     const len = input.length;
 
@@ -48,11 +54,15 @@ const strToBitArr = (input: string) => {
         throw new Error('데이터 구조 오류 - 불완전한 데이터 감지')
     }
 
-    // 임시로 데이터 길이 정보를 인덱스 1과 2에 둘 다 저장
-    bitArr[1] = validForLen;
-    bitArr[2] = validForLen;
-
-    return bitArr;
+    // 임시로 첫 번째와 두 번째 인덱스에 0으로 저장
+    bitArr[1] = 0;
+    bitArr[2] = 0;
+    
+    return {
+        category: bitArr[0],
+        length: validForLen,
+        bitArr: bitArr
+    };
 }
 
-export { strToBitArr }
+export { strToBitArr, AsterixMetaInfo }

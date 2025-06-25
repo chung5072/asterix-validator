@@ -1,10 +1,4 @@
-import { strToBitArr } from "./utils/convert";
-
-interface AsterixMetaInfo {
-    category: number,
-    length: number,
-    bitArr: Uint8Array
-}
+import { strToBitArr, AsterixMetaInfo } from "./utils/convert";
 
 /**
  * inputData
@@ -13,19 +7,15 @@ interface AsterixMetaInfo {
  */
 const inputData = (input: string): AsterixMetaInfo => {
     // 8bit 배열로 변환한 결과
-    let bitArr: Uint8Array;
+    let result: AsterixMetaInfo;
 
     try {
-        bitArr = strToBitArr(input);
+        result = strToBitArr(input)
     } catch (error) {
         throw error;
     }
 
-    return {
-        category: bitArr[0],
-        length: bitArr[1],
-        bitArr: bitArr
-    }
+    return result;
 }
 
 export { inputData }
